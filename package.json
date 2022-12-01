@@ -7,7 +7,7 @@
         "deploy": "cd RS-Dashboard && npm run build && cd ../ && npm start",
         "server": "nodemon server.js",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "heroku-postbuild": "cd RS-Dashboard && npm build"
+        "heroku-postbuild": "cd RS-Dashboard && npm run build"
     },
     "repository": {
         "type": "git",
