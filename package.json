@@ -1,29 +1,51 @@
 {
-    "name": "RS-Dashboard",
-    "version": "1.0.0",
-    "description": "Clustering algorithms are very popular methods. However, these algorithms usually need to be tuned by the end users to correspond to some preconceptions. This process is iterative and time consuming. The goal of this project is to develop an UI that will help in the refinement process. The user preferences will be provided and the algorithm will incorporate the new knowledge provided. Moreover, this interface will also be able to initiate this process by asking for potentially important information from the user.",
-    "main": "index.js",
-    "scripts": {
-        "deploy": "cd RS-Dashboard && npm run build && cd ../ && npm start",
-        "server": "nodemon server.js",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "heroku-postbuild": "cd RS-Dashboard && npm run build"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/vsusini/Interactive-Constrained-Clustering.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/vsusini/Interactive-Constrained-Clustering/issues"
-    },
-    "homepage": "https://github.com/vsusini/Interactive-Constrained-Clustering#readme",
-    "dependencies": {
-        "cors": "^2.8.5",
-        "express": "^4.17.1",
-        "express-fileupload": "^1.2.0",
-        "nodemon": "^2.0.6",
-        "request": "^2.88.2"
-    }
+  "name": "rs-dashboard",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^15.0.0",
+    "@angular/cdk": "^15.0.1",
+    "@angular/common": "^15.0.0",
+    "@angular/compiler": "^15.0.0",
+    "@angular/core": "^15.0.0",
+    "@angular/forms": "^15.0.0",
+    "@angular/material": "^15.0.1",
+    "@angular/platform-browser": "^15.0.0",
+    "@angular/platform-browser-dynamic": "^15.0.0",
+    "@angular/router": "^15.0.0",
+    "axios": "^1.2.0",
+    "rxjs": "~7.5.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.12.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "nodemon": "^2.0.6",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^15.0.2",
+    "@angular/cli": "~15.0.2",
+    "@angular/compiler-cli": "^15.0.0",
+    "@types/jasmine": "~4.3.0",
+    "jasmine-core": "~4.5.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "typescript": "~4.8.2"
+  },
+  "engines": {
+    "node": "16.14.0",
+    "npm": "9.1.3" 
+  }
 }

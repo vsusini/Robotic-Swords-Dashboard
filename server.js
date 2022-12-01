@@ -5,7 +5,7 @@ const path = require('path');
 const cors = require('cors')
 const port = process.env.PORT || 4500;
 const app = express();
-const publicPath = path.join(__dirname, "interactive-constrained-clustering/build")
+const publicPath = path.join(__dirname, "/build")
 // middle ware
 app.use(express.static(publicPath));
 app.use(express.static('public')); //to access the files in public folder
