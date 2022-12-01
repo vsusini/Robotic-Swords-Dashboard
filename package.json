@@ -9,7 +9,7 @@
     "deploy": "cd RS-Dashboard && npm run build && cd ../ && npm start",
     "server": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "npm run build --prod"
+    "heroku-postbuild": "nodemon server.js && npm run build --prod && npm start"
   },
   "main": "index.js",
   "private": true,
