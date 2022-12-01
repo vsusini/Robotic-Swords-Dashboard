@@ -15,24 +15,11 @@ export class DataCollectionService {
     const formData = new FormData();
     var url = "http://localhost:4500/getAccount"
     formData.append("wallet", "f1ip452DtnWLzrZ2YiF8NRjrjwpM4zSo5QRhcuRJSvC")
-    var requestOptions = {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        wallet: "f1ip452DtnWLzrZ2YiF8NRjrjwpM4zSo5QRhcuRJSvC"
-      })
-    }
-    axios.post(url, formData, {})
+    axios.post(url, formData, {headers: { "Content-Type":"application/json"  }})
     .then(parsedRes =>{
       console.log(parsedRes.data)
       return parsedRes
     })
-
-
-
 
     axios
 	  .get('https://hadeswap.com/pools/DsncRqYnA6fqm7zwPWS7p3QZYyDRb1KUFNYQAX41YFXV')

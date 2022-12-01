@@ -1,16 +1,21 @@
 const express = require('express');
 const request = require('request');
-const fileUpload = require('express-fileupload');
 const path = require('path');
 const cors = require('cors')
 const port = process.env.PORT || 4500;
+var bodyParser = require('body-parser')
 const app = express();
-const publicPath = path.join(__dirname, "/build")
+const publicPath = path.join(__dirname, "/dist/rs-dashboard/")
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
+
 // middle ware
 app.use(express.static(publicPath));
 app.use(express.static('public')); //to access the files in public folder
 app.use(cors()); // it enables all cors requests
-app.use(fileUpload());
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(publicPath, 'index.html'));
