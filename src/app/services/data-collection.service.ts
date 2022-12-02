@@ -13,7 +13,8 @@ export class DataCollectionService {
 
   getWalletData(){
     const formData = new FormData();
-    var url = "http://localhost:4500/getAccount"
+    // var url = "http://localhost:4500/getAccount"
+    var url = "http://localhost:53684/getAccount"
     formData.append("wallet", "f1ip452DtnWLzrZ2YiF8NRjrjwpM4zSo5QRhcuRJSvC")
     axios.post(url, formData, {headers: { "Content-Type":"application/json"  }})
     .then(parsedRes =>{
