@@ -7,18 +7,28 @@ import { SwordsPayoutComponent } from './components/swords-payout/swords-payout.
 import { HadeswapPayoutComponent } from './components/hadeswap-payout/hadeswap-payout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { TwoLevelCardComponent } from './components/cards/two-level-card/two-level-card.component';
+import { RoiMintComponent } from './components/roi-mint/roi-mint.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
     AppComponent,
     SwordsPayoutComponent,
-    HadeswapPayoutComponent
+    HadeswapPayoutComponent,
+    TwoLevelCardComponent,
+    RoiMintComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent],

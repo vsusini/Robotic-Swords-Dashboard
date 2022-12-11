@@ -13,7 +13,13 @@ export class SwordsPayoutComponent {
   ){
   }
 
+  walletValue = NaN
+
   getInfo() {
     this.dataCollectionService.getWalletData()
+    .then((response)=>{
+      this.walletValue = parseInt(response.data.lamports) / 1000000000
+    })
+
   }
 }
